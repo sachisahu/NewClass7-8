@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Dice Roll</title>
+</head>
+<body>
+
+    <img id="dice" src="/diceImage/1.png" width="100" height="100"> <br><br>
+    <button onclick="rollADice()">Roll</button>
+    
+</body>
+
+    <script>
+
+        function rollADice(){
+            var num = (Math.random() * 5) + 1;
+            num = num.toFixed(0)
+
+            var image = document.getElementById('dice');
+            //alert(num);
+            if(num == 1){
+                image.src = "/diceImage/1.png";
+            }
+            else if(num == 2){
+                image.src = "/diceImage/2.png";
+            }
+            else if(num == 3){
+                image.src = "/diceImage/3.png";
+            }
+            else if(num == 4){
+                image.src = "/diceImage/4.png";
+            }
+            else if(num == 5){
+                image.src = "/diceImage/5.png";
+            }
+            else{
+                image.src = "/diceImage/6.png";
+            }
+
+   
+        }
+
+    </script>
+
+
+</html>

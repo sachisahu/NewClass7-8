@@ -1,0 +1,43 @@
+
+<html>
+<head>
+    <title>JavaScript 3</title>
+</head>
+<body>
+    <button id="add" onclick="add()">Add</button>
+    <p id="content">0</p>
+    <button id="sub" onclick="sub()">Sub</button>
+
+    <p id="expo">expo</p>
+    <button id="sub" onclick="exp()">Exp</button>
+
+
+
+    <script>
+        var x = 0;
+        var z=10;
+        function add(){
+            x++;
+            document.getElementById("content").innerHTML = x;
+        }
+        function sub(){
+            x--;
+            document.getElementById("content").innerHTML = x;
+        }
+        function exp(){
+            var x = 10;
+            var y = 3;
+
+
+            var z1 = 5 ** 3;
+
+            var div = x / y;
+            var mod = x % y;
+
+
+            document.getElementById("expo").innerHTML = "Div ="+ div +", "+"Mod = "+mod;
+        }
+    </script>
+    
+</body>
+</html>

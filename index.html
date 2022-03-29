@@ -1,15 +1,91 @@
 <html>
 <head>
-    <title>Hyperlink</title>
+    <title>HTML Form</title>
 </head>
 <body>
+    <!-- <h1>Student Details</h1>
+    <form>
+        Name:<input type="text"><br><br>
+        Rollno:<input type="number"><br><br>
+        DOB:<input type="date"><br><br>
+        Gender: <input type="radio" name="gen">Male
+                <input type="radio" name="gen">Female
+                <input type="radio" name="gen">others<br><br>
+        Subject <input type="checkbox">English
+                <input type="checkbox">Maths
+                <input type="checkbox">Hindi
+                <input type="checkbox">Physics
+                <input type="checkbox">Chemistry
+                <input type="checkbox">Biology<br><br>
+        Password:<input type="password"><br><br>
+        BloodGroup: <select>
+                        <option>O</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>AB</option>
+                    </select><br><br>
+                
+       
+    </form>  -->
 
-    <h1>Hyperlinks Class 7</h1>
-    <a href="s.html">S</a>
-    <a href="tables.html">Table</a>
-    <a href="list.html">List</a>
-    <a href="hyperlink.html">Hyperlink</a>
-    <a href="form.html">Form</a>
+
+    <form>
+        NUM1<input id="num1" type="number">
+        +NUM2<input id="num2" type="number">
+        <p id="result"></p>
+    </form>
+
+    <style>
+        #result{
+            color: aqua;
+        }
+    </style>
+
+    <button onclick="add()">Add</button>
+
+    <button onclick="pro()" >Submit</button>
+    <button onclick="myFun2()"> Reset</button>
+    <p id="stu"></p>
+
+    <script>
+        function myFun(){
+            prompt("Submited Successfully");
+        }
+        function myFun2(){
+            let text = "Enter ok or Cancel";
+
+            if(confirm(text) == true){
+                text = "You Confirmed";
+                
+            }
+            else{
+                text = "You Denied";
+            }
+
+            document.getElementById("stu").innerHTML = text;
+
+
+        }
+
+        function pro(){
+            let student = prompt("Please Enter Your Name","Ayush");
+
+            document.getElementById("stu").innerHTML = student + student;
+
+        }
+        var num1,num2;
+
+        function add(){
+            num1 = Number(document.getElementById("num1").value);
+            num2 = Number(document.getElementById("num2").value);
+            var sum = num1+num2;
+            var sub = num1-num2;
+            var mul = num1*num2;
+            var div = num1/num2;
+
+            document.getElementById("result").innerHTML = "<u>ADD</u><br>"+num1+"+"+num2+"="+sum +"<hr>"+num1+"-"+num2+"="+sub;
+        }
+    </script>
     
 </body>
 </html>

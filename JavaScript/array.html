@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Array Javascript</title>
+</head>
+<body>
+
+    <p id="p">
+    </p>
+
+    <button onclick="arr()">OK</button>
+
+
+    
+</body>
+
+    <script>
+
+        function arr(){
+            const name = ["Rajesh","Ayush","Subham"];
+            name[3] = "Omm";
+
+            //alert(name.length);
+
+            
+            
+
+            for(var i = 0;i<name.length;i++){
+                document.getElementById("p").innerHTML = name[i]+","+ document.getElementById('p').textContent;
+            }
+            const data = document.getElementById('p').textContent
+            //alert(data)
+
+        }
+
+
+    </script>
+</html>

@@ -1,5 +1,10 @@
 body {
-    background: linear-gradient(blue,green)
+    /* background: linear-gradient(blue,green) */
+
+    background-image: url("https://www.teahub.io/photos/full/244-2442545_new-bk-edit-hd-background-bk-editing-zone.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
 }
 h1 {
     color : red;

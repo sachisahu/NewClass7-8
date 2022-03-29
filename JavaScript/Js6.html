@@ -1,0 +1,103 @@
+<html>
+
+   <head>
+    <title>Mark Calculator</title>
+   </head>
+
+   <body>
+
+    <div id="mark">
+        <h3>Mark Calculator</h1>
+        <form>
+            <table>
+                <tr>
+                    <td>Maths</td>
+                    <td><input id="getMathsmark" type="number">  </td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td><input id="getPhysicsMark" type="number">  </td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td><input id="getChemiMark" type="number">  </td>
+                </tr>
+                <tr>
+                    <td>Biology</td>
+                    <td><input id="getBiologyMark" type="number">  </td>
+                </tr>
+            </table>
+        </form>
+        <button onclick="calc()">Calculate</button>
+        <br><br>
+
+        <table border="1">
+            <tr>
+                <th>Total Marks</th>
+                <th>%Age</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td><p id="setTotalMark">56</p> </td>
+                <td><p id="setPercentage">89</p> </td>
+                <td><p id="SetGrade">A</p> </td>
+            </tr>
+
+        </table>
+
+    </div>
+    
+
+   </body>
+
+   <script>
+       
+       function calc(){
+                var math,phy,chem,bio;
+
+        math = Number(document.getElementById("getMathsmark").value);
+        phy = Number(document.getElementById("getPhysicsMark").value);
+        chem = Number(document.getElementById("getChemiMark").value);
+        bio = Number(document.getElementById("getBiologyMark").value);
+
+        //Required Field Validator
+        if(math<=0){
+            alert("Enter Math Marks")
+        }else if(phy<=0){
+            alert("Enter Phy marks")
+        }
+        
+
+
+        //Total mark
+        var totalMark = math+phy+chem+bio;
+        document.getElementById("setTotalMark").innerHTML = totalMark;
+
+
+        //Percentage Calculator
+        var per = (totalMark/400)*100;
+        document.getElementById("setPercentage").innerHTML = per;
+
+
+        //Assign Grades
+        var grade;
+        if(per>90){
+            grade = "A";
+        }
+        else if(per>80){
+            grade = "B";
+        }
+        else if(per>70){
+            grade = "C";
+        }
+        else{
+            grade = "D";
+        }
+        document.getElementById("SetGrade").innerHTML = grade;
+       }
+
+
+       
+   </script>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript 4</title>
+</head>
+<body>
+    <form>
+        <label>Num 1</label>
+        <input id="num1" type="text">
+        <label>Num 2</label>
+        <input id="num2" type="text">
+    </form>
+    <br>
+    <button id="check" onclick="check()">Check</button>
+
+    <script>
+
+        function check(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+
+
+            if(num1>90){
+                alert("A")
+            }
+            else if(num1>80 && num1<90){
+                alert("B")
+            }
+            else{
+                alert("F")
+            }
+
+
+
+            //num1 > num2 ? alert("Greater is "+ num1) : alert("Greater is "+ num2);
+        }
+
+
+    </script>
+</body>
+</html>

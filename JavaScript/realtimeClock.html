@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Time</title>
+</head>
+<body onload="time()">
+    <div id="div2">
+        <p id="output">Ok</p>
+    </div>
+    
+</body>
+<style>
+
+    #div2{
+        margin-top: 20px;
+    }
+
+    #output{
+        text-align: center;
+        font-size: 100px;
+        border-radius: 3px;
+        color: blueviolet;
+        font-family: cursive;
+        border: 2px solid rosybrown;
+    }
+    body{
+        background-color: beige;
+    }
+
+</style>
+
+<script>
+    function time(){
+        const todayTime = new Date();
+        let hrs = todayTime.getHours();
+        let mins = todayTime.getMinutes();
+        let sec = todayTime.getSeconds();
+        
+        sec = checak(sec);
+        mins = checak(mins)
+        document.getElementById("output").innerHTML = hrs+":"+mins+":"+sec;
+
+        setTimeout(time,1000)
+    }
+
+    function checak(i){
+        if(i<10){
+            i = "0"+i
+        }
+        return i;
+    }
+
+
+</script>
+</html>

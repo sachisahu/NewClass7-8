@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Javascript</title>
+</head>
+<body>
+
+    <p id="output">X</p> <br>
+    <button onclick="game()" > Role</button>
+
+    <script>
+        function game(){
+            var out = (Math.random() * 5) + 1;
+            document.getElementById("output").innerHTML = out.toFixed(0) ;
+        }
+    </script>
+    
+</body>
+</html>
